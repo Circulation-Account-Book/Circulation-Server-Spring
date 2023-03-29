@@ -1,2 +1,2 @@
-# Circulation-Server-Spring
-Circulation Account Book Server
+# Froot-Server-Spring
+Froot Account Book Server
