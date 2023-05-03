@@ -52,7 +52,7 @@ public class ArticleApiController {
 
 
     }
-    @PostMapping("/check1")
+    @PostMapping("/check")
     public ResponseEntity<Article> check1(@RequestBody String dto){
 
         if(articleRepository.findByEmail(dto)!=null){
@@ -64,21 +64,6 @@ public class ArticleApiController {
             return ResponseEntity.status(HttpStatus.OK).body(null);
         }
     }
-
-    @PostMapping("/check")
-    public ResponseEntity<Article> check(@RequestBody ArticleForm dto){
-        Article article=dto.toEntity();
-        if(articleRepository.findByEmail(article.getEmail())!=null){
-            log.info("중복되었습니다");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
-        }
-        else{
-            log.info("중복x");
-            return ResponseEntity.status(HttpStatus.OK).body(null);
-        }
-    }
-
-
 
     //회원가입
     @PostMapping("/api/articles")
