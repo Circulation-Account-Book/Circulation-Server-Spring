@@ -53,15 +53,15 @@ public class ArticleApiController {
 
     }
     @PostMapping("/check")
-    public ResponseEntity<Article> check1(@RequestBody String dto){
+    public ResponseEntity<Boolean> check1(@RequestBody String dto){
 
         if(articleRepository.findByEmail(dto)!=null){
             log.info("중복되었습니다");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(false);
         }
         else{
             log.info("중복x");
-            return ResponseEntity.status(HttpStatus.OK).body(null);
+            return ResponseEntity.status(HttpStatus.OK).body(true);
         }
     }
 
