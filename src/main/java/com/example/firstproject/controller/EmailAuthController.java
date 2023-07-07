@@ -1,5 +1,0 @@
-package com.example.firstproject.controller;
-
-public class EmailAuthController {
-    //hello
-}
