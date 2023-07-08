@@ -1,4 +1,4 @@
-package resource;
+package com.example.firstproject.resource;
 
 public class EmailResource {
     public static String getMailserver() {

@@ -49,7 +49,7 @@ public class EmailServiceImpl implements EmailService {//extends는 클래스 �
     @Override
     public String createKey() {
         Random random = new Random();
-        int num = random.nextInt(8);
+        int num = random.nextInt(8) * 12345;
         String key = String.valueOf(num);
         return key;
     }
@@ -85,5 +85,3 @@ public class EmailServiceImpl implements EmailService {//extends는 클래스 �
 
         this.mailSender.send(simpleMailMessage);
     }*/
-
-
