@@ -6,10 +6,10 @@ public class EmailResource {
     }
 
     public static String getUsername() {
-        return "yongwoo1207@naver.com";
+        return "이메일";
     }
     public static String getUserpwd() {
-        return "gnem36zjvl";
+        return "비밀번호";
     }
 
 }
